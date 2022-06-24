@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- === Header Starts === -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>ReSeFa</title>
+
+  <link href="./assets/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/font.css" rel="stylesheet" type="text/css">
+  <link href="./assets/style.css" rel="stylesheet" type="text/css">
+</head>
+<!-- === Header Ends === -->
+
+
+<body>
+
+
+<!-- === Home Section Starts === -->
+<div class="section">
+  <!-- === Title Starts === -->
+  <div class="header">
+    <div class="title", style="padding-top: 25pt;">
+      Region-Based Semantic Factorization in GANs
+    </div>
+  </div>
+  <!-- === Title Ends === -->
+  <div class="author">
+    <a href="https://zhujiapeng.github.io/" target="_blank">Jiapeng Zhu</a><sup>1</sup> &nbsp; &nbsp;
+    <a href="http://shenyujun.github.io/" target="_blank">Yujun Shen</a><sup>2</sup> &nbsp; &nbsp;
+    <a href="https://justimyhxu.github.io/" target="_blank">Yinghao Xu</a><sup>3</sup> &nbsp; &nbsp;
+    <a href="https://sites.google.com/site/zhaodeli" target="_blank">Deli Zhao</a><sup>4</sup> &nbsp; &nbsp;
+    <a href="https://cqf.io/" target="_blank">Qifeng Chen</a><sup>1</sup>
+
+  </div>
+  <div class="institution">
+    <sup>1</sup>The Hong Kong University of Science and Technology &nbsp; &nbsp; &nbsp; &nbsp;
+    <sup>2</sup>ByteDance Inc
+    <br/>
+    <sup>3</sup>The Chinese University of Hong Kong &nbsp; &nbsp; &nbsp; &nbsp;
+    <sup>4</sup>Ant Group.
+  </div>
+  <div class="link">
+    [<a href="https://arxiv.org/pdf/2202.09649.pdf" target="_blank">Paper</a>]
+    [<a href="https://github.com/zhujiapeng/resefa" target="_blank">Code</a>]
+    [<a href="https://youtu.be/Rsr0VJNvXW8" target="_blank">Demo</a>]
+<!--    [<a href="" target="_blank">Colab</a>]-->
+  </div>
+  <div class="teaser">
+    <img src="./assets/teaser.jpg">
+  </div>
+</div>
+<!-- === Home Section Ends === -->
+
+
+<!-- === Overview Section Starts === -->
+<div class="section">
+  <div class="title">Overview</div>
+  <div class="body">
+    In this work, we propose <b>ReSeFa</b> for Region-based Semantic Factorization in GANs.
+    Specifically, we re-examine the task of local editing using pre-trained GANs. We argue that a good attribute
+    vector for local control on the synthesized images will only affect
+    the pixels landed in the target region while barely influencing the pixels outside this region.
+     Based on this assumption, we obtain an optimization goal, which is happened to be a generalized Rayleigh
+    quotient, which can be solved by a generalized eigenvalue problem. In short, the local control task is
+    elegantly converted to solve an eigen-decomposition problem. Extensive experiments demonstrate the effectiveness
+    of our proposed method.
+  </div>
+</div>
+<!-- === Overview Section Ends === -->
+
+
+<!-- === Result Section Starts === -->
+<div class="section">
+<div class="title">Results</div>
+  <div class="body">
+    The following results are created by manipulating the versatile semantics
+    found by <b>ReSeFa</b>.
+
+    <p style="margin-top: 30pt; text-align:center; font-size:25px">Diverse semantics discovered from one sample.<p>
+
+    <p style="margin-top: 10pt; text-align:center; font-size:20px">FFHQ (StyleGAN2)<p>
+    <table width="100%" style="margin: 0pt auto; text-align: center; border-collapse: separate; border-spacing: 5pt;">
+      <tr>
+        <td><b>Eyes</b></td>
+        <td><b>Eyebrows</b></td>
+        <td><b>Mouth</b></td>
+        <td><b>Nose</b></td>
+      </tr>
+      <tr>
+        <td><img src="./assets/gifs/ffhq/eyes.gif" width="90%"></img></td>
+        <td><img src="./assets/gifs/ffhq/eyebrow.gif" width="90%"></img></td>
+        <td><img src="./assets/gifs/ffhq/mouth.gif" width="90%"></img></td>
+        <td><img src="./assets/gifs/ffhq/nose.gif" width="90%"></img></td>
+      </tr>
+    </table>
+
+    <p style="margin-top: 10pt; text-align:center; font-size:20px">Car Wheels (StyleGAN2)<p>
+    <table width="100%" style="margin: 0pt auto; text-align: center; border-collapse: separate; border-spacing: 5pt;">
+      <tr>
+        <td><img src="./assets/gifs/car/car_00_0.gif" width="90%"></img></td>
+        <td><img src="./assets/gifs/car/car_00_1.gif" width="90%"></img></td>
+        <td><img src="./assets/gifs/car/car_00_2.gif" width="90%"></img></td>
+        <td><img src="./assets/gifs/car/car_00_3.gif" width="90%"></img></td>
+      </tr>
+    </table>
+
+    <p style="margin-top: 30pt; text-align:center; font-size:25px">Generalizing semantics across samples.<p>
+
+    <p style="margin-top: 10pt; text-align:center; font-size:20px">Car Wheels (StyleGAN2)<p>
+    <table width="100%" style="margin: 0pt auto; text-align: center; border-collapse: separate; border-spacing: 5pt;">
+      <tr>
+        <td><img src="./assets/gifs/car/car_00.gif" width="90%"></img></td>
+        <td><img src="./assets/gifs/car/car_01.gif" width="90%"></img></td>
+        <td><img src="./assets/gifs/car/car_02.gif" width="90%"></img></td>
+        <td><img src="./assets/gifs/car/car_03.gif" width="90%"></img></td>
+      </tr>
+    </table>
+
+    <p style="margin-top: 10pt; text-align:center; font-size:20px">Church (StyleGAN2)<p>
+    <table width="100%" style="margin: 0pt auto; text-align: center; border-collapse: separate; border-spacing: 5pt;">
+      <tr>
+        <td><img src="./assets/gifs/church/church_00.gif" width="90%"></img></td>
+        <td><img src="./assets/gifs/church/church_01.gif" width="90%"></img></td>
+        <td><img src="./assets/gifs/church/church_02.gif" width="90%"></img></td>
+        <td><img src="./assets/gifs/church/church_03.gif" width="90%"></img></td>
+      </tr>
+    </table>
+
+    <p style="margin-top: 10pt; text-align:center; font-size:20px">AFHQ Eyes (StyleGAN3)<p>
+    <table width="100%" style="margin: 0pt auto; text-align: center; border-collapse: separate; border-spacing: 5pt;">
+      <tr>
+        <td><img src="./assets/gifs/afhq/cat.gif" width="90%"></img></td>
+        <td><img src="./assets/gifs/afhq/lion.gif" width="90%"></img></td>
+        <td><img src="./assets/gifs/afhq/tiger.gif" width="90%"></img></td>
+        <td><img src="./assets/gifs/afhq/wolf.gif" width="90%"></img></td>
+      </tr>
+    </table>
+
+
+    <p style="margin-top: 30pt; text-align:center; font-size:25px">Demo Video<p>
+
+    <!-- Adjust the frame size based on the demo (Every project differs). -->
+    <div style="position: relative; padding-top: 50%; margin: 20pt auto; text-align: center;">
+      <iframe src="" frameborder=0
+              style="position: absolute; top: 2.5%; left: 2.5%; width: 95%; height: 100%;"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+<!-- === Result Section Ends === -->
+
+
+<!-- === Reference Section Starts === -->
+<div class="section">
+  <div class="bibtex">BibTeX</div>
+<pre>
+ @inproceedings{zhu2022resefa,
+  title     = {Region-Based Semantic Factorization in {GAN}s},
+  author    = {Zhu, Jiapeng and Shen, Yujun and Xu, Yinghao and Zhao, Deli and Chen, Qifeng},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  year      = {2022}
+}
+
+</pre>
+
+
+<div class="ref">Related Work</div>
+
+  <div class="citation">
+    <div class="image"><img src="./assets/related_work/stylespace.jpg"></div>
+    <div class="comment">
+      <a href="https://arxiv.org/abs/2011.12799" target="_blank">
+        Zongze Wu and Dani Lischinski and Eli Shechtman.
+        StyleSpace Analysis: Disentangled Controls for StyleGAN Image Generation.
+        CVPR, 2021.</a><br>
+      <b>Comment:</b>
+      Explores the influences of the channels on the synthesized images.
+    </div>
+  </div>
+  <div class="citation">
+    <div class="image"><img src="./assets/related_work/sefa.jpg"></div>
+    <div class="comment">
+      <a href="https://github.com/harskish/ganspace" target="_blank">
+        Shen, Yujun and Zhou, Bolei.
+        Closed-Form Factorization of Latent Semantics in GANs.
+        CVPR2021.</a><br>
+      <b>Comment:</b>
+      Unsupervisedly factorizes the latent semantics in GANs.
+    </div>
+  </div>
+  <div class="citation">
+    <div class="image"><img src="./assets/related_work/lowrankgan.jpg"></div>
+    <div class="comment">
+      <a href="https://arxiv.org/abs/1812.01161" target="_blank">
+        Zhu, Jiapeng and Feng, Ruili and Shen, Yujun and Zhao, Deli and Zha, Zhengjun and Zhou, Jingren and Chen, Qifeng.
+        Low-Rank Subspaces in GANs.
+        NeurIPS 2021.</a><br>
+      <b>Comment:</b>
+      Explores the low rank subspaces in GANs to control the local region of the synthesized images.
+  </div>
+  </div>
+</div>
+<!-- === Reference Section Ends === -->
+
+
+</body>
+</html>

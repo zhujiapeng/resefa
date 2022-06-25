@@ -11,7 +11,7 @@
 [[Paper](http://arxiv.org/abs/2202.09649)]
 [[Project page](https://zhujiapeng.github.io/resefa/)]
 [[Demo](https://youtu.be/Rsr0VJNvXW8)]
-[[Colab](https://colab.research.google.com/github.com/zhujiapeng/resefa/tree/main/docs/resefa.ipynb)]
+[[Colab](https://colab.research.google.com/github/zhujiapeng/resefa/blob/main/docs/resefa.ipynb)]
 
 In the repository, we propose a simple algorithm to interpret the region-based semantics learned by GANs. In particular, we re-examine the task of local editing with pre-trained GAN models, and formulate region-based semantic discovery as a dual optimization problem. Through an appropriately defined generalized Rayleigh quotient, we are able to tackle such a problem super efficiently with a closed-form solution. Extensive experiments on BigGAN and StyleGAN2 demonstrate the effectiveness and robustness of our proposed method.
 

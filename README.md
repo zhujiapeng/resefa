@@ -8,6 +8,10 @@
 > Jiapeng Zhu, Yujun Shen, Yinghao Xu, Deli Zhao, Qifeng Chen <br>
 > *International Conference on Machine Learning (ICML) 2022* <br>
 
+# Web Demo
+
+Integrated into [Huggingface Spaces 🤗](https://huggingface.co/spaces) using [Gradio](https://github.com/gradio-app/gradio). Try out the Web Demo [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/ICML2022/resefa)
+
 [[Paper](http://arxiv.org/abs/2202.09649)]
 [[Project page](https://zhujiapeng.github.io/resefa/)]
 [[Demo](https://youtu.be/Rsr0VJNvXW8)]
